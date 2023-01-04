@@ -1,9 +1,14 @@
-public class Cluster
-{
-    public final static int NUM_STEMS = 7; //number of tendrils per cluster
-
-    public Cluster(int len, int x, int y)
-    {
-        // your code here
+class Cluster{
+  private Tendril[] tendrils;
+  Cluster(int x, int y, int numSegments, int numTendrils, int depth){
+    tendrils = new Tendril[numTendrils];
+    for(int i = 0; i<numTendrils; i++){
+      tendrils[i] = new Tendril(x, y, numSegments, numTendrils, (int)(360/numTendrils*i), depth);
     }
+  }
+  void show(){
+    for(Tendril tendril:tendrils){
+      tendril.show();
+    }
+  }
 }
