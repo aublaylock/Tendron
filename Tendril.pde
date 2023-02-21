@@ -1,6 +1,6 @@
 class Tendril{
-  int x, y, segments, depth, tendrils;
-  int angle;
+  private int x, y, segments, depth, tendrils;
+  private int angle;
   Tendril(int startX, int startY,int numSegments, int numTendrils, int angle, int depth){
     x = startX;
     y = startY;
@@ -9,7 +9,7 @@ class Tendril{
     this.angle = angle;
     this.depth = depth;
   }
-  void show(){
+  public void show(){
     int endX, endY;
     strokeWeight(depth*3);
     if(depth==1)
