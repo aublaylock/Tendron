@@ -6,7 +6,7 @@ class Cluster{
       tendrils[i] = new Tendril(x, y, numSegments, numTendrils, (int)(360/numTendrils*i), depth);
     }
   }
-  void show(){
+  public void show(){
     for(Tendril tendril:tendrils){
       tendril.show();
     }
